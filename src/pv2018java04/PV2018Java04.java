@@ -37,6 +37,7 @@ public class PV2018Java04 {
         System.out.println("6-Este método recibe dos fechas y devuelve la cantidad de días domingos comprendidos entre ambas fechas");
         System.out.println("7-Este método calcula la diferencia en días entre dos fechas dadas por el usuario como cadenas con el formato dd/mm/yy");
         System.out.println("8-Ingresa fecha y le agrega 100 dias");
+        System.out.println("9-Salir");
         opcion = ingreso.nextInt();
         switch (opcion) {
             case 1:
