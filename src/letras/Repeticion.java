@@ -12,31 +12,60 @@ import java.util.Scanner;
  * @author Agustin
  */
 public class Repeticion {
-    String cadena;
-    String a;
-    
+
+    private String cadena;
+    private String a;
+
     public Repeticion() {
     }
-    
-    public void cargarCad(){
-        Vocales ingreso=new Vocales();
-        cadena=ingreso.cargarCadena();
-        Scanner ingresar=new Scanner(System.in);
+
+    public void cargarCad() {
+        Vocales ingreso = new Vocales();
+        setCadena(ingreso.cargarCadena());
+        Scanner ingresar = new Scanner(System.in);
         System.out.println("Ingrese Char");
-        a=ingresar.nextLine();
+        setA(ingresar.nextLine());
     }
-    
-    public int contarRep(){
-        char b=a.charAt(0);
-        int rep=0;
-        int i=(cadena.length()-1);
-        String cadmay=cadena.toUpperCase();
-        while (i>=0){
-            if (cadena.charAt(i)==b||cadmay.charAt(i)==b){
-                rep=rep+1;
+
+    public int contarRep() {
+        char b = getA().charAt(0);
+        int rep = 0;
+        int i = (getCadena().length() - 1);
+        String cadmay = getCadena().toUpperCase();
+        while (i >= 0) {
+            if (getCadena().charAt(i) == b || cadmay.charAt(i) == b) {
+                rep = rep + 1;
             }
-        i=i-1;
+            i = i - 1;
         }
         return rep;
+    }
+
+    /**
+     * @return the cadena
+     */
+    public String getCadena() {
+        return cadena;
+    }
+
+    /**
+     * @param cadena the cadena to set
+     */
+    public void setCadena(String cadena) {
+        this.cadena = cadena;
+    }
+
+    /**
+     * @return the a
+     */
+    public String getA() {
+        return a;
+    }
+
+    /**
+     * @param a the a to set
+     */
+    public void setA(String a) {
+        this.a = a;
     }
 }

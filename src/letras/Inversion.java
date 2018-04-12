@@ -10,22 +10,24 @@ package letras;
  * @author Agustin
  */
 public class Inversion {
+
     private String cadena;
 
-    public String cargarCad(){
-        Vocales ingreso=new Vocales();
+    public String cargarCad() {
+        Vocales ingreso = new Vocales();
         setCadena(ingreso.cargarCadena());
         return getCadena();
     }
-    public void invertirCad(){
-        String cadenainv="";
-        int i=getCadena().length()-1;
-        while (i>=0){
-            cadenainv=cadenainv+getCadena().charAt(i);
-            i=i-1;
+
+    public void invertirCad() {
+        String cadenainv = "";
+        int i = getCadena().length() - 1;
+        while (i >= 0) {
+            cadenainv = cadenainv + getCadena().charAt(i);
+            i = i - 1;
         }
-        System.out.println(cadenainv);   
-        
+        System.out.println(cadenainv);
+
     }
 
     /**
@@ -41,5 +43,5 @@ public class Inversion {
     public void setCadena(String cadena) {
         this.cadena = cadena;
     }
-    
+
 }
