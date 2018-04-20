@@ -58,19 +58,19 @@ public class Fecha {
         int a;
         a = pasarStringADate().getMonth();
         String estacion;
-        if (a >= 1 || a <= 3) {
+        if (a >= 1 && a <= 3) {
             estacion = "Verano";
             return estacion;
         } else {
-            if (a >= 4 || a <= 6) {
+            if (a >= 4 && a <= 6) {
                 estacion = "Otoño";
                 return estacion;
             } else {
-                if (a >= 7 || a <= 9) {
+                if (a >= 7 && a <= 9) {
                     estacion = "Invierno";
                     return estacion;
                 } else {
-                    if (a >= 10 || a <= 12) {
+                    if (a >= 10 && a <= 12) {
                         estacion = "Primavera";
                         return estacion;
                     } else {
@@ -89,9 +89,8 @@ public class Fecha {
         double c;
         double d;
         c = ((a.getTime() - b.getTime()) / 86400000) / 7;
-        d = c / 7;
         int dom;
-        dom = (int) d;
+        dom = (int) c;
         return dom;
     }
 
